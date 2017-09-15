@@ -1,6 +1,9 @@
 img{
     width: 100%;
 }
+.clear{
+    clear: both;
+}
 .p11{
     background-color: #b7dddf;
 }
@@ -153,4 +156,22 @@ img{
 }
 .nright{
     right: 0 !important;
+}
+
+.p10 .desc .title{
+    width: 94%;
+    height: 26%;
+    background: url('../images/p10title2.png') no-repeat;
+    float: right;
+    background-size: 100% 100%;
+    padding-left: 34px;
+    line-height: 23px;
+    font-weight: bold;
+}
+.p10 .desc .content{
+    width: 88%;
+    margin: 0 auto;
+    color: #676666;
+    line-height: 23px;
+    padding-top: 10px;
 }
