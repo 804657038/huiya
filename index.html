@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css" />
 
-    <link rel="stylesheet" href="css/main.css?v=4">
+    <link rel="stylesheet" href="css/main.css?v=6">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="lib/ydui.css" />
@@ -82,9 +82,11 @@
 	            		</div>
 	            		<div class="page32">
 	            			<div class="playPop">
-	            				<a href="###"><img src="img/play.png" /></a>
+	            				<a href="###" id="playzero"><img src="img/play.png" /></a>
 	            			</div>
-	            			<audio></audio>
+	            			<video id="videozero" preload="auto" webkit-playsinline="" playsinline="" style="display: none;">
+								<source src="http://ovy8sjkfb.bkt.clouddn.com/7f9c0201709132045063735.mp4" type="video/mp4">
+							</video>
 	            		</div>
 	            		<div class="page33">
 	            			<p>汇亚TT总部展厅由台湾建筑师朱柏仰老师主笔设计，挣脱条条框框的束缚，以极其利落干脆富有力量感的线型美学架构现代简约空间，把独一无二的几何标志视觉符号贯穿始终，大胆自信宣扬品牌年轻、个性的主张。同时娴熟驾驭色彩穿透人的感情诉求，在光与影的自然变换间，实现人与环境的高度融合，创造出一个设计现代化，空间年轻化，品相个性化的汇亚TT总部展厅。</p>
@@ -92,24 +94,73 @@
 	            	</div>
 	            </div>
 	            <div class="swiper-slide">
-	            	<div id="page4">
+	            	<div id="page41">
+	            		<div class="video">
+	            			<img src="img/more1.png">
+	            			<div class="playing">
+	            				<a href="###" id="playone"><img src="img/page4play.png" /></a>
+	            			</div>
+	            			<video id="videoone" preload="auto" webkit-playsinline="" playsinline="" style="display: none;">
+								<source src="http://ovy8sjkfb.bkt.clouddn.com/7f9c0201709132045063735.mp4" type="video/mp4">
+							</video>
+	            
+	            		</div>
+	            		<div class="page411">
+	            			<img src="img/page4title.png" />
+	            			<form>
+	            				<ul>
+	            					<li>
+	            						<label for="yourname">姓名：</label>
+	            						<input type="text" placeholder="请输入您的姓名" id='yourname'/>
+	            					</li>
+	            					<li>
+	            						<label for="yourphone">手机：</label>
+	            						<input type="text" placeholder="请输入您的手机号码" id='yourphone'/>
+	            					</li>
+	            					<li>
+	            						<label for="yourarea">区域：</label>
+	            						<input type="text" placeholder="请填写区域" id='yourarea'/>
+	            					</li>
+	            					<li>
+	            						<input type="submit" value="加入年轻生活派" id="submit" />
+	            					</li>
+	            				</ul>
+	            			</form>
+	            			<div style="margin-top: 5%;">
+	            				<p class="leftf1">体验地址：</p>
+	            				<p class="leftf2">广东省佛山市禅城区中国陶瓷总部基地东区B01</p>
+	            				<div style="clear: left;"></div>
+	            			</div>
+	            			<div style="margin-bottom: 5%;">
+	            				<p class="leftf1">咨询电话：</p>
+	            				<p class="leftf2" style="font-weight:bold ;">0757-82527369</p>
+	            				<div style="clear: left;"></div>
+	            			</div>	            			
+	            		</div>
+	            		<a href="###" id="lookmore"><img src="img/lookMore.png"/></a>
+	            	</div>
+	            	<div id="page4" style="display: none;">
 	            		<div class="page41">
-	            			<a href="###"><img src="img/close.png"></a>
+	            			<a href="###" id="close"><img src="img/close.png"></a>
 	            		</div>
 	            		<div class="page42">
 	            			<div class="playPop">
-	            				<a href="###"><img src="img/play.png" /></a>
+	            				<a href="###" id="playtwo"><img src="img/play.png" /></a>
 	            			</div>
-	            			<audio></audio>
+	            			<video id="videotwo" preload="auto" webkit-playsinline="" playsinline="" style="display: none;">
+								<source src="http://huiya.hengdikeji.com/api/public/static/home/video/mms1.mp4" type="video/mp4">
+							</video>
 	            		</div>
 	            		<div class="page43">
 	            			<p>《妈妈说》我的生活我做主</p>
 	            		</div>
 	            		<div class="page44">
 	            			<div class="playPop">
-	            				<a href="###"><img src="img/play.png" /></a>
+	            				<a href="###" id="playthree"><img src="img/play.png" /></a>
 	            			</div>
-	            			<audio></audio>
+	            			<video id="videothree" preload="auto" webkit-playsinline="" playsinline="" style="display: none;">
+								<source src="http://huiya.hengdikeji.com/api/public/static/home/video/jxz.mp4" type="video/mp4">
+							</video>
 	            		</div>
 	            		<div class="page45">《租来的房子》即使租房生活品质也不掉下</div>
 	            	</div>
@@ -260,6 +311,8 @@
 				            		</div>
 				            	</div>
 				            </div>
+
+				            <div class="swiper-pagination swiper-pagination9"></div>
 				        </div>
 	            	</div>
 	            </div>
@@ -356,11 +409,26 @@
 
         <script src="lib/ydui.citys.js"></script>
         <script src="lib/ydui.js"></script>
+        <script type="text/javascript" src="js/index.js" ></script>
 	    <script>
 
 		    var swiper = new Swiper('.swiper-container-main', {
 		        direction: 'vertical',
-		        initialSlide :8
+		        initialSlide :3,
+				onSlideChangeStart: function(swiper){
+					zero.pause();
+					$('#videozero').hide();
+					$('#videozero').siblings('.playPop').show();
+					one.pause();
+					$('#videoone').hide();
+			      	two.pause();
+					$('#videotwo').hide();
+					$('#videotwo').siblings('.playPop').show();
+					three.pause();
+					$('#videothree').hide();
+					$('#videothree').siblings('.playPop').show();
+					$('#page4').slideUp();
+			    }
 		    });
         //省市区三级联动
         $(function(){
@@ -375,8 +443,29 @@
             $target.on('done.ydui.cityselect', function (ret) {
                 $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
             });
-        })
+        });
+        //省市区三级联动
+        $(function(){
+            var $target = $('#yourarea');
+            $target.citySelect();
+
+            $target.on('click', function (event) {
+                event.stopPropagation();
+                $target.citySelect('open');
+            });
+
+            $target.on('done.ydui.cityselect', function (ret) {
+                $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+            });
+        });
+        $('body').height($('body')[0].clientHeight);
+        $(document).on('focusin','input',function(){
+        	swiper.lockSwipes();
+        });
+        $(document).on('focusout','input',function(){
+        	swiper.unlockSwipes();
+        });
 	    </script>
-	    <script type="text/javascript" src="js/index.js" ></script>
+	    
 	</body>
 </html>

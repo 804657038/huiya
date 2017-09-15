@@ -134,11 +134,11 @@ body{
 #page3 .page32{
 	width: 85.3%;
 	height: 33.4%;
-	background:red;
+	background:#b7dddf;
 	margin-left: 7.3%;
 	position: relative;
 }
-#page3 .page32 audio{
+#page3 .page32 video{
 	width: 100%;
 	height: 100%;
 }
@@ -173,7 +173,116 @@ body{
 	line-height: 20px;
 }
 /*视频 4p*/
+#page41{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #b7dddf;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.page411{
+	width: 85.3%;
+	border: 1px solid #000000;
+}
+.video{
+	width: 85.3%;
+	margin-bottom: 4%;
+	position: relative;
+}
+.video>img:nth-child(1){
+	width: 100%;
+}
+.video .playing{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.video .playing>img{
+	width: 27.3%;
+}
+.video video{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.page411 img:nth-child(1){
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	padding: 5%;
+}
+.page411 ul li{
+	border: 1px solid #131417;
+	width: 81.25%;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+.page411 ul li input{
+	width: 66%;
+	font-size: 14px;
+	line-height: 30px;
+	border: 0;
+}
+.page411 ul li label{
+	display: inline-block;
+	width: 30%;
+	font-size: 14px;
+	line-height: 30px;
+	color: #131417;
+	text-indent: 14px;
+	text-align: center;
+}
+#submit{
+	width: 100%;
+	text-align: center;
+	background-color: #171e22;
+	color: #b7dddf;
+}
+.leftf1{
+	float: left;
+	width: 26%;
+	margin-left: 4%;
+	font-size: 14px;
+	line-height: 20px;
+	color: #131417;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.leftf2{
+	float: left;
+	width: 64%;
+	font-size: 14px;
+	line-height: 20px;
+	color: #131417;
+}
+#page41 a{
+	width: 31%;
+	display: block;
+	padding-top: 4%;
+}
+#page41 a img{
+	display: block;
+	width: 100%;
+}
+/*视频 4p*/
 #page4{
+	background-color: white;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -197,11 +306,11 @@ body{
 #page4 .page42{
 	width: 85.3%;
 	height: 33.4%;
-	background:red;
+	background:white;
 	margin-left: 7.3%;
 	position: relative;
 }
-#page4 .page42 audio{
+#page4 .page42 video{
 	width: 100%;
 	height: 100%;
 }
@@ -244,11 +353,11 @@ body{
 #page4 .page44{
 	width: 85.3%;
 	height: 33.4%;
-	background:red;
+	background:white;
 	margin-left: 7.3%;
 	position: relative;
 }
-#page4 .page44 audio{
+#page4 .page44 video{
 	width: 100%;
 	height: 100%;
 }
@@ -413,7 +522,7 @@ body{
 	height: 100%;
 }
 #page9 .swiper-slide{
-	width: 65.6%;
+	width: 66%;
 	height: 100%;
 }
 #page9 .page9Title{
@@ -425,14 +534,14 @@ body{
 	width: 100%;
 }
 .page9{
-	height: 70% !important;
+	height: 71% !important;
 	width: 100%;
 	background-color: white;
 }
 .page9>.nineTop{
 	background-color: #b7dddf;
 	text-align: center;
-	padding: 6% 0%;
+	padding: 5% 0% 6%;
 }
 .page9>.nineTop>img:nth-child(1){
 	width: 20.73%;
@@ -446,7 +555,7 @@ body{
 }
 .page9>.nineTop>p:nth-child(3){
 	color: #666666;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 26px;
 }
 .page9>.nineBottom{
@@ -458,5 +567,18 @@ body{
 	margin: 0 auto;
 	font-size: 15px;
 	line-height: 24px;
+}
+#page9 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom: 20%;
+	left: -16%;
+}
+#page9 .swiper-pagination-bullet-active {
+    background: #f9f9f8!important;
+    border: 1px solid #b6b6b6;
+}
+#page9 .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: #d2d2d2;
 }
 /*9p结束*/
