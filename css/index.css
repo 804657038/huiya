@@ -358,9 +358,10 @@ body{
 	margin-bottom: 1%;
 }
 #page7>img:nth-child(1){
-	height: 9.5%;
+	height: 15%;
 	margin: 0 auto;
 	padding: 5%;
+	width: auto;
 }
 /*7p结束*/
 /*8p开始*/
