@@ -37,19 +37,17 @@
                         </div>
 
                     </div>
+
                     <div class="content">
                         <div class="bottom"></div>
                         <div class="swiper-container p10top">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide item left">
-                                    <img src="images/p10banner.png" alt="">
-                                </div>
-                                <div class="swiper-slide item left">
-                                    <img src="images/p10banner.png" alt="">
-                                </div>
-                                <div class="swiper-slide item left">
-                                    <img src="images/p10banner.png" alt="">
-                                </div>
+                                <template v-for="item in p10banner">
+                                    <div class="swiper-slide item left">
+                                        <img src="{{ item.thumb }}" alt="">
+                                    </div>
+                                </template>
+
                             </div>
                         </div>
                         <div class="swiper-button-prev nobg nleft">
