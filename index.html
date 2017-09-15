@@ -2,17 +2,24 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Swiper demo</title>
+    <title>汇亚陶瓷集团</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
 	<meta content="yes" name="apple-mobile-web-app-capable"/>
 	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
 	<meta content="telephone=no" name="format-detection"/>
     <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/main.css?v=4">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="lib/ydui.css" />
+    <script src="lib/ydui.flexible.js"></script>
+    <script type="text/javascript" src="https://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
 </head>
 	<body>
 	    <!-- Swiper -->
-	    <div class="swiper-container swiper-container-main">
+	    <div class="swiper-container swiper-container-main" id="vueMain">
 	        <div class="swiper-wrapper">
 	            <div class="swiper-slide">Slide 1</div>
 	            <div class="swiper-slide">Slide 2</div>
@@ -23,14 +30,107 @@
 	            <div class="swiper-slide">Slide 7</div>
 	            <div class="swiper-slide">Slide 8</div>
 	            <div class="swiper-slide">Slide 9</div>
-	            <div class="swiper-slide">Slide 10</div>
+	            <div class="swiper-slide p10">
+                    <div class="head">
+                        <div class="headContent">
+                            <img src="images/p10title.png" alt="">
+                        </div>
+
+                    </div>
+                    <div class="content">
+                        <div class="bottom"></div>
+                        <div class="swiper-container p10top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide item left">
+                                    <img src="images/p10banner.png" alt="">
+                                </div>
+                                <div class="swiper-slide item left">
+                                    <img src="images/p10banner.png" alt="">
+                                </div>
+                                <div class="swiper-slide item left">
+                                    <img src="images/p10banner.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev nobg nleft">
+                            <img src="images/lefticon.png" alt="">
+                        </div>
+                        <div class="swiper-button-next nobg nright">
+                            <img src="images/righticon.png" alt="">
+                        </div>
+                        <div class="swiper-pagination-p10"></div>
+                    </div>
+                    <div class="desc">
+
+                    </div>
+
+                </div>
+	            <div class="swiper-slide p11">
+
+                   <div class="p11_content">
+                       <div class="p11_title"><img src="img/p11title.png" alt=""></div>
+                       <div class="p11_title2"><img src="images/p11title2.png" alt=""></div>
+                       <div class="p11_form">
+                           <p class="p11_p1">
+                               <span class="th">电话: </span>
+                               <span><i>0757-82527369／13392228989</i></span>
+                           </p>
+                           <div class="form-item">
+                               <div class="left fotm_left" style="background: url('images/user.png') no-repeat center">
+
+                               </div>
+                               <div class="left fotm_right">
+                                   <input type="text" name="name" placeholder="您的姓名">
+                               </div>
+                           </div>
+                           <div class="form-item">
+                               <div class="left fotm_left" style="background: url('images/mobile.png') no-repeat center">
+                               </div>
+                               <div class="left fotm_right">
+                                   <input type="text" name="mobile" placeholder="您的手机号码">
+                               </div>
+                           </div>
+                           <div class="form-item">
+                               <div class="left fotm_left" style="background: url('images/addres.png') no-repeat center">
+                               </div>
+                               <div class="left fotm_right">
+                                   <input type="text" placeholder="选择区域" id="J_Address">
+                               </div>
+                           </div>
+                           <div class="form-item">
+                               <button class="submit">提交申请</button>
+                           </div>
+                       </div>
+
+                   </div>
+                </div>
 	        </div>
 	    </div>
+
 	    <script type="text/javascript" src="js/swiper-3.4.2.min.js" ></script>
+	    <script type="text/javascript" src="js/main.js" ></script>
+
+        <script src="lib/ydui.citys.js"></script>
+        <script src="lib/ydui.js"></script>
 	    <script>
-	    var swiper = new Swiper('.swiper-container', {
+	    var swiper = new Swiper('.swiper-container-main', {
 	        direction: 'vertical'
 	    });
+
+        //省市区三级联动
+        $(function(){
+            var $target = $('#J_Address');
+            $target.citySelect();
+
+            $target.on('click', function (event) {
+                event.stopPropagation();
+                $target.citySelect('open');
+            });
+
+            $target.on('done.ydui.cityselect', function (ret) {
+                $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+            });
+        })
 	    </script>
 	</body>
 </html>
